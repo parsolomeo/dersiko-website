@@ -1,0 +1,387 @@
+/* ── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand palette */
+  --bg:            #160E07;
+  --bg-surface:    #1E140A;
+  --bg-card:       #251A0E;
+  --bg-card-hover: #2D2010;
+  --border:        rgba(196, 162, 101, 0.15);
+  --border-hover:  rgba(196, 162, 101, 0.35);
+
+  --gold:          #C4A265;
+  --gold-light:    #D9BC8A;
+  --gold-dark:     #8A6D3F;
+  --text-primary:  #EDE0CC;
+  --text-secondary:#A08C6E;
+  --text-muted:    #6B5A42;
+
+  /* Spacing */
+  --radius-card:   20px;
+  --radius-badge:  10px;
+  --container:     1200px;
+
+  /* Typography */
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout Helpers ─────────────────────────────────────────── */
+.container {
+  width: min(var(--container), 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1rem 4rem;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,162,101,0.12) 0%, transparent 70%);
+}
+
+.hero-bg-feather {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-bg-feather img {
+  width: min(520px, 90vw);
+  opacity: 0.06;
+  filter: blur(2px);
+  user-select: none;
+  transform: rotate(-10deg);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.brand-prefix {
+  color: var(--text-primary);
+}
+
+.brand-suffix {
+  color: var(--gold);
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.hero-sub {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* ── APPS SECTION ───────────────────────────────────────────── */
+.apps-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.section-title {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Grid: 1 → 2 → 4 columns */
+.apps-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .apps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── APP CARD BASE ──────────────────────────────────────────── */
+.app-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+/* ── LIVE CARD ──────────────────────────────────────────────── */
+.app-card--live {
+  border-color: rgba(196, 162, 101, 0.3);
+  box-shadow: 0 0 0 1px rgba(196,162,101,0.08), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.app-card--live:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(196,162,101,0.18), 0 16px 40px rgba(0,0,0,0.5);
+}
+
+/* ── COMING SOON CARD ───────────────────────────────────────── */
+.app-card--soon {
+  cursor: default;
+}
+
+.card-content-blur {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  filter: blur(2px) grayscale(0.5);
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* "Çok Yakında" pill */
+.coming-soon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(196, 162, 101, 0.15);
+  border: 1px solid rgba(196, 162, 101, 0.4);
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── CARD ICON ──────────────────────────────────────────────── */
+.card-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CSS-only placeholder icon for coming-soon apps */
+.card-icon-wrap--placeholder {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-initial {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* ── CARD BODY ──────────────────────────────────────────────── */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.card-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.card-subject {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-top: 0.2rem;
+  flex: 1;
+}
+
+/* ── STORE BADGES ───────────────────────────────────────────── */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-badge);
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  transition: background 0.18s, border-color 0.18s, transform 0.15s;
+  min-width: 0;
+}
+
+.badge-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.badge span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.badge small {
+  font-size: 0.62rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.badge strong {
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+/* Google Play badge */
+.badge--play {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.badge--play:not(.badge--disabled):hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Apple badge */
+.badge--apple {
+  background: rgba(196, 162, 101, 0.1);
+  border: 1px solid rgba(196, 162, 101, 0.25);
+  color: var(--gold-light);
+}
+
+.badge--apple:not(.badge--disabled):hover {
+  background: rgba(196, 162, 101, 0.18);
+  border-color: rgba(196, 162, 101, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Disabled (coming-soon) badges */
+.badge--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 1rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+
+/* ── Focus visible ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
