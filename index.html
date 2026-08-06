@@ -35,239 +35,155 @@
       </div>
       <p class="hero-tagline">YKS · AYT · KPSS hazırlık uygulamaları</p>
       <p class="hero-sub">Oyunlaştırılmış öğrenme deneyimiyle sınava hazırlan.</p>
+      <nav class="hero-jump" aria-label="Uygulama serileri">
+        <a href="#yks" class="jump-chip">YKS / AYT</a>
+        <a href="#kpss" class="jump-chip">KPSS</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container apps-section">
+  <main class="container tracks">
 
     <!-- ══ YKS / AYT ═══════════════════════════════════════════ -->
-    <section class="apps-group">
-      <div class="group-head">
-        <h2 class="group-title">YKS / AYT</h2>
-        <p class="group-sub">Üniversiteye hazırlık serisi</p>
+    <section class="track" id="yks">
+      <div class="track-head">
+        <span class="track-tag">YKS / AYT</span>
+        <p class="track-sub">Üniversiteye hazırlık serisi</p>
       </div>
 
-      <div class="apps-grid">
+      <ul class="app-list">
 
         <!-- ── edebiko: iOS live, Android soon ── -->
-        <div class="app-card app-card--live">
-          <div class="card-icon-wrap">
-            <img src="assets/edebiko-icon.png" alt="edebiko uygulama ikonu" class="card-icon" />
+        <li class="app-row app-row--live">
+          <div class="row-icon">
+            <img src="assets/edebiko-icon.png" alt="edebiko uygulama ikonu" />
           </div>
-          <div class="card-body">
-            <h3 class="card-name">edebiko</h3>
-            <p class="card-subject">AYT Edebiyat</p>
-            <p class="card-desc">YKS/AYT Türk Edebiyatı konularını eğlenceli eşleştirme oyunlarıyla öğren.</p>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">edebiko</h3>
+              <span class="status-pill status-pill--live">iOS'ta yayında</span>
+            </div>
+            <p class="row-subject">AYT Edebiyat</p>
+            <p class="row-desc">Türk Edebiyatı konularını eğlenceli eşleştirme oyunlarıyla öğren.</p>
             <div class="store-badges">
-              <a href="https://apps.apple.com/tr/app/edebiko-yks-edebiyat-ezber/id6764361001" class="badge badge--apple" aria-label="App Store'dan İndir" target="_blank" rel="noopener noreferrer">
+              <a href="https://apps.apple.com/tr/app/edebiko-yks-edebiyat-ezber/id6764361001" class="badge badge--apple" aria-label="edebiko'yu App Store'dan indir" target="_blank" rel="noopener noreferrer">
                 <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
                 </svg>
-                <span>
-                  <small>App Store'da</small>
-                  <strong>İndir</strong>
-                </span>
+                <span>App Store</span>
               </a>
               <span class="badge badge--play badge--pending" aria-label="Google Play'de yakında">
                 <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  <path d="M1.5 1.5v21L12 12 1.5 1.5Z" opacity=".3"/>
                 </svg>
-                <span>
-                  <small>Google Play'de</small>
-                  <strong>Yakında</strong>
-                </span>
+                <span>Play · Yakında</span>
               </span>
             </div>
           </div>
-        </div>
+        </li>
 
         <!-- ── cofiko: coming soon ── -->
-        <div class="app-card app-card--soon">
-          <div class="coming-soon-badge">Çok Yakında</div>
-          <div class="card-content-blur">
-            <div class="card-icon-wrap">
-              <img src="assets/cofiko-icon.png" alt="" class="card-icon" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">cofiko</h3>
-              <p class="card-subject">AYT Coğrafya</p>
-              <p class="card-desc">YKS/AYT Coğrafya konularını keşfederek öğren.</p>
-              <div class="store-badges">
-                <span class="badge badge--apple badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
-                  </svg>
-                  <span>
-                    <small>App Store'da</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-                <span class="badge badge--play badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  </svg>
-                  <span>
-                    <small>Google Play'de</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-              </div>
-            </div>
+        <li class="app-row app-row--soon">
+          <div class="row-icon">
+            <img src="assets/cofiko-icon.png" alt="" />
           </div>
-        </div>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">cofiko</h3>
+              <span class="status-pill">Çok yakında</span>
+            </div>
+            <p class="row-subject">AYT Coğrafya</p>
+            <p class="row-desc">Coğrafya konularını keşfederek öğren.</p>
+          </div>
+        </li>
 
         <!-- ── tariko: coming soon ── -->
-        <div class="app-card app-card--soon">
-          <div class="coming-soon-badge">Çok Yakında</div>
-          <div class="card-content-blur">
-            <div class="card-icon-wrap">
-              <img src="assets/tariko-icon.png" alt="" class="card-icon" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">tariko</h3>
-              <p class="card-subject">AYT Tarih</p>
-              <p class="card-desc">YKS/AYT Tarih konularını eğlenceli kartlarla pekiştir.</p>
-              <div class="store-badges">
-                <span class="badge badge--apple badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
-                  </svg>
-                  <span>
-                    <small>App Store'da</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-                <span class="badge badge--play badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  </svg>
-                  <span>
-                    <small>Google Play'de</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-              </div>
-            </div>
+        <li class="app-row app-row--soon">
+          <div class="row-icon">
+            <img src="assets/tariko-icon.png" alt="" />
           </div>
-        </div>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">tariko</h3>
+              <span class="status-pill">Çok yakında</span>
+            </div>
+            <p class="row-subject">AYT Tarih</p>
+            <p class="row-desc">Tarih konularını eğlenceli kartlarla pekiştir.</p>
+          </div>
+        </li>
 
-      </div><!-- /.apps-grid -->
+      </ul>
     </section>
 
     <!-- ══ KPSS ════════════════════════════════════════════════ -->
-    <section class="apps-group">
-      <div class="group-head">
-        <h2 class="group-title">KPSS</h2>
-        <p class="group-sub">KPSS Kartları serisi</p>
+    <section class="track" id="kpss">
+      <div class="track-head">
+        <span class="track-tag">KPSS</span>
+        <p class="track-sub">KPSS Kartları serisi</p>
       </div>
 
-      <div class="apps-grid">
+      <ul class="app-list">
 
         <!-- ── KPSS Tarih: iOS live, Android soon ── -->
-        <div class="app-card app-card--live">
-          <div class="card-icon-wrap">
-            <img src="assets/kpss-tarih-icon.png" alt="KPSS Kartları: Tarih uygulama ikonu" class="card-icon" />
+        <li class="app-row app-row--live">
+          <div class="row-icon">
+            <img src="assets/kpss-tarih-icon.png" alt="KPSS Kartları: Tarih uygulama ikonu" />
           </div>
-          <div class="card-body">
-            <h3 class="card-name">KPSS Kartları: Tarih</h3>
-            <p class="card-subject">KPSS Tarih</p>
-            <p class="card-desc">Padişahları, savaşları ve antlaşmaları hafıza kartları ve aralıklı tekrarla kalıcı hafızana kazı.</p>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">KPSS Kartları: Tarih</h3>
+              <span class="status-pill status-pill--live">iOS'ta yayında</span>
+            </div>
+            <p class="row-subject">KPSS Tarih</p>
+            <p class="row-desc">Padişahları, savaşları ve antlaşmaları aralıklı tekrarla kalıcı hafızana kazı.</p>
             <div class="store-badges">
-              <a href="https://apps.apple.com/tr/app/kpss-kartlar%C4%B1-tarih/id6781207009?l=tr" class="badge badge--apple" aria-label="App Store'dan İndir" target="_blank" rel="noopener noreferrer">
+              <a href="https://apps.apple.com/tr/app/kpss-kartlar%C4%B1-tarih/id6781207009?l=tr" class="badge badge--apple" aria-label="KPSS Kartları: Tarih uygulamasını App Store'dan indir" target="_blank" rel="noopener noreferrer">
                 <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
                 </svg>
-                <span>
-                  <small>App Store'da</small>
-                  <strong>İndir</strong>
-                </span>
+                <span>App Store</span>
               </a>
               <span class="badge badge--play badge--pending" aria-label="Google Play'de yakında">
                 <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  <path d="M1.5 1.5v21L12 12 1.5 1.5Z" opacity=".3"/>
                 </svg>
-                <span>
-                  <small>Google Play'de</small>
-                  <strong>Yakında</strong>
-                </span>
+                <span>Play · Yakında</span>
               </span>
             </div>
           </div>
-        </div>
+        </li>
 
         <!-- ── KPSS Coğrafya: coming soon ── -->
-        <div class="app-card app-card--soon">
-          <div class="coming-soon-badge">Çok Yakında</div>
-          <div class="card-content-blur">
-            <div class="card-icon-wrap">
-              <img src="assets/kpss-cografya-icon.png" alt="" class="card-icon" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">KPSS Kartları: Coğrafya</h3>
-              <p class="card-subject">KPSS Coğrafya</p>
-              <p class="card-desc">Türkiye'nin coğrafi yapısını, iklimini ve ekonomisini kartlarla hızlıca ezberle.</p>
-              <div class="store-badges">
-                <span class="badge badge--apple badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
-                  </svg>
-                  <span>
-                    <small>App Store'da</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-                <span class="badge badge--play badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  </svg>
-                  <span>
-                    <small>Google Play'de</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-              </div>
-            </div>
+        <li class="app-row app-row--soon">
+          <div class="row-icon">
+            <img src="assets/kpss-cografya-icon.png" alt="" />
           </div>
-        </div>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">KPSS Kartları: Coğrafya</h3>
+              <span class="status-pill">Çok yakında</span>
+            </div>
+            <p class="row-subject">KPSS Coğrafya</p>
+            <p class="row-desc">Türkiye'nin coğrafi yapısını, iklimini ve ekonomisini kartlarla ezberle.</p>
+          </div>
+        </li>
 
         <!-- ── KPSS Vatandaşlık: coming soon ── -->
-        <div class="app-card app-card--soon">
-          <div class="coming-soon-badge">Çok Yakında</div>
-          <div class="card-content-blur">
-            <div class="card-icon-wrap">
-              <img src="assets/kpss-vatandaslik-icon.png" alt="" class="card-icon" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">KPSS Kartları: Vatandaşlık</h3>
-              <p class="card-subject">KPSS Vatandaşlık</p>
-              <p class="card-desc">Anayasa, temel hak ve özgürlükler ile devlet yapısını kartlarla kalıcı hâle getir.</p>
-              <div class="store-badges">
-                <span class="badge badge--apple badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/>
-                  </svg>
-                  <span>
-                    <small>App Store'da</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-                <span class="badge badge--play badge--disabled">
-                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M3.18 23.76a2 2 0 0 1-.93-.93L13.06 12 2.25 1.17A2 2 0 0 1 3.18.24L20.09 11a1.5 1.5 0 0 1 0 2.02L3.18 23.76Z"/>
-                  </svg>
-                  <span>
-                    <small>Google Play'de</small>
-                    <strong>Yakında</strong>
-                  </span>
-                </span>
-              </div>
-            </div>
+        <li class="app-row app-row--soon">
+          <div class="row-icon">
+            <img src="assets/kpss-vatandaslik-icon.png" alt="" />
           </div>
-        </div>
+          <div class="row-main">
+            <div class="row-head">
+              <h3 class="row-name">KPSS Kartları: Vatandaşlık</h3>
+              <span class="status-pill">Çok yakında</span>
+            </div>
+            <p class="row-subject">KPSS Vatandaşlık</p>
+            <p class="row-desc">Anayasa, temel hak ve özgürlükler ile devlet yapısını kalıcı hâle getir.</p>
+          </div>
+        </li>
 
-      </div><!-- /.apps-grid -->
+      </ul>
     </section>
 
   </main>
